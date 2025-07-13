@@ -3,10 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <title>PreZiop</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
       margin: 0;
-      background-color: #131C2D;
+      background-color:#131C2D;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -14,24 +15,33 @@
       font-family: 'Segoe UI', sans-serif;
       color: white;
       flex-direction: column;
+      padding: 20px;
+      text-align: center;
+      gap: 10px; /* controla el espacio entre los elementos */
     }
+
     img {
-      max-width: 300px;
-      margin-bottom: 20px;
+      max-width: 80%;
+      height: auto;
+      margin-bottom: 10px; /* reducido de 20px */
     }
+
     h1 {
       font-size: 2rem;
       margin: 0;
       font-weight: 400;
       letter-spacing: 1px;
     }
+
     p {
       font-size: 1rem;
       opacity: 0.7;
-      margin-top: 8px;
+      margin: 4px 0 0 0; /* menos espacio arriba */
+      max-width: 500px;
     }
+
     .soon {
-      margin-top: 30px;
+      margin-top: 16px; /* menos espacio arriba */
       padding: 10px 20px;
       border: 1px solid white;
       border-radius: 6px;
@@ -40,10 +50,42 @@
       letter-spacing: 1px;
       opacity: 0.8;
     }
+
+    @media (min-width: 768px) {
+      h1 {
+        font-size: 2.5rem;
+      }
+
+      p {
+        font-size: 1.2rem;
+      }
+
+      .soon {
+        font-size: 1.3rem;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      img {
+        max-width: 360px; /* logo un poco más grande en escritorio */
+      }
+
+      h1 {
+        font-size: 3rem;
+      }
+
+      p {
+        font-size: 1.3rem;
+      }
+
+      .soon {
+        font-size: 1.4rem;
+      }
+    }
   </style>
 </head>
 <body>
-  <img src="logo.png" alt="PreZiop Logo">
+  <img src="logo.jpg" alt="PreZiop Logo">
   <h1>El precio es tuyo.</h1>
   <p>Tu radar urbano de precios en tiempo real</p>
   <div class="soon">Próximamente</div>
